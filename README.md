@@ -1,35 +1,6 @@
 # LoRa P2P Interoperability Suite — BitDogLab (RP2040)
 
-[Português] | [English]
-
----
-
-## [Português]
-
-Este projeto implementa um firmware de alta performance para comunicação LoRa Ponto-a-Ponto (P2P) utilizando a plataforma **BitDogLab** (Raspberry Pi Pico / RP2040) e o rádio **SX1276**. 
-
-### 🌟 Destaques do Projeto
-*   **Arquitetura Modular:** Separação clara entre lógica de aplicação, drivers de hardware e camada de configuração.
-*   **Interoperabilidade Cross-Platform:** Projetado para se comunicar nativamente com a stack [ROS2_LR](https://github.com/iglesiojunior/ROS2_LR) (ESP32).
-*   **Handshake Inteligente:** Protocolo Ping-Pong binário para medição precisa de latência real.
-
-### 📊 Telemetria e Diagnóstico
-*   **RSSI & SNR:** Monitoramento completo da potência e clareza do sinal.
-*   **Média Móvel:** Suavização de RSSI para estimativa estável de distância.
-*   **PDR (Packet Delivery Ratio):** Taxa de sucesso de entrega em tempo real.
-*   **Auto-Retransmissão:** Reenvio automático de pacotes em caso de falha.
-*   **Watchdog Timer:** Proteção de hardware contra travamentos de rádio/SPI.
-
-### 🎮 Interface de Usuário
-*   **Combo A+B:** Alterna entre **Gateway** e **Alvo**.
-*   **Botão A:** Altera o **Spreading Factor** (SF7 a SF12).
-*   **OLED 4 Linhas:** Exibe latência, RSSI, SNR, distância e PDR.
-
----
-
-## [English]
-
-This project implements a high-performance LoRa Point-to-Point (P2P) communication firmware for the **BitDogLab** platform (Raspberry Pi Pico / RP2040) and the **SX1276** radio.
+High-performance LoRa Point-to-Point (P2P) communication firmware for the **BitDogLab** platform (Raspberry Pi Pico / RP2040) and the **SX1276** radio.
 
 ### 🌟 Project Highlights
 *   **Modular Architecture:** Clear separation between application logic, hardware drivers (LoRa, OLED, Buttons), and configuration layers.
@@ -50,7 +21,7 @@ This project implements a high-performance LoRa Point-to-Point (P2P) communicati
 
 ---
 
-## 📂 Structure / Estrutura
+## 📂 Project Structure
 ```text
 LoRa/
 ├── main.c                # Application logic & state machine
@@ -62,7 +33,7 @@ LoRa/
     └── buttons/          # Debounce & combo detection logic
 ```
 
-## 🛠️ Requirements / Requisitos
+## 🛠️ Requirements
 *   **Raspberry Pi Pico SDK** (v2.0.0+)
 *   **CMake** & **Ninja/Make**
 *   **Picotool** (for CLI flashing)
@@ -73,7 +44,7 @@ LoRa/
 3.  Compile: `ninja`
 4.  Flash (PowerShell): `./flash_all.ps1`
 
-## 🔗 References / Referências
+## 🔗 References
 *   **Base Repository:** [iglesiojunior/ROS2_LR](https://github.com/iglesiojunior/ROS2_LR)
 
 ---

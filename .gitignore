@@ -1,2 +1,8 @@
-build
-!.vscode/*
+build/
+.cache/
+.vscode/
+*.idx
+*.cpp
+*.elf
+*.bin
+*.uf2
